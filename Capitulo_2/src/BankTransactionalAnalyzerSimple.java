@@ -1,13 +1,7 @@
-import java.io.File;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.time.LocalDate;
-import java.time.Month;
-import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 import java.util.List;
 
 public class BankTransactionalAnalyzerSimple {
@@ -28,7 +22,6 @@ public class BankTransactionalAnalyzerSimple {
                 total += amount;
 
         }
-
         if(fck == 0){
         String result = "\nResultado, " +Double.toString(total);
         Files.writeString(path, result, StandardOpenOption.APPEND);
