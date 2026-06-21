@@ -23,7 +23,7 @@ public class BankTransactionalAnalyzerSimple {
 
         }
         if(fck == 0){
-        String result = "\nResultado, " +Double.toString(total);
+        String result = "\nResultado, " + total;
         Files.writeString(path, result, StandardOpenOption.APPEND);
         }
 
