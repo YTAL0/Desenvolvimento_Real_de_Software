@@ -22,5 +22,6 @@ public class BankTransactionalByMonth {
                 total += amount;
             }
         }
+
         IO.println("Nosso valor total "+ total);
 }
