@@ -11,7 +11,6 @@ public class BankTransactionalByMonth {
     public static void main(String[] args) throws Exception{
         final Path path = Paths.get(RESOURCES + "bank-data-simple.csv");//criando url do caminho
         final List<String> lines = Files.readAllLines(path);
-
         final DateTimeFormatter DATE_PATTERN = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         double total = 0d;
         for(String line: lines){
