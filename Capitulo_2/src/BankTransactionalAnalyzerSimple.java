@@ -11,10 +11,10 @@ public class BankTransactionalAnalyzerSimple {
         final Path path = Paths.get(RESOURCES + "bank-data-simple.csv");//criando url do caminho
         final List<String> lines = Files.readAllLines(path);
         double total = 0;
-        int fck = 0;
+        int cnt = 0;
         for(String line: lines){
             if(line.isBlank() || line.contains("Resultado,")){
-                fck++;
+                cnt++;
                 continue;
             }
                 String[] columns = line.split(",");
@@ -22,7 +22,7 @@ public class BankTransactionalAnalyzerSimple {
                 total += amount;
 
         }
-        if(fck == 0){
+        if(cnt == 0){
         String result = "\nResultado, " + total;
         Files.writeString(path, result, StandardOpenOption.APPEND);
         }
